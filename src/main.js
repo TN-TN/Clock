@@ -15,14 +15,12 @@ function createWindow() {
     const {width, height} = electron.screen.getPrimaryDisplay().workAreaSize;
     mainWindow = new BrowserWindow({
         width: width/2,
-        height: height/2,
+        height: (height/2)+height/3,
         title: "Clock",
         resizable: true
     });
 
     const template = [];
-
-
     if (process.platform === 'darwin') {
         template.unshift({
             label: app.getName(),

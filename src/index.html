@@ -13,16 +13,16 @@
     <header>
         <div layout-fill layout="column" ng-cloak>
             <md-content md-theme='{{theme}}' md-theme-watch="true">
-                <md-nav-bar md-selected-nav-item="1" md-no-ink-bar="false" aria-label="mainNavBar">
+                <md-nav-bar md-no-ink-bar="false" aria-label="mainNavBar">
                     <div layout="row" layout-align="center" flex>
-                        <md-nav-item md-nav-href="#page2" name="clock">
+                        <md-nav-item ui-sref="countdown" md-nav-sref=="countdown" name="countdown">
+                            <md-icon class="white">av_timer</md-icon>
+                        </md-nav-item>
+                        <md-nav-item ui-sref="clock" md-nav-sref="clock" name="clock">
                             <md-icon class="white">alarm</md-icon>
                         </md-nav-item>
-                        <md-nav-item md-nav-href="#page2" name="stopwatch">
-                            <md-icon class="white">alarm</md-icon>
-                        </md-nav-item>
-                        <md-nav-item md-nav-href="#page2" name="countdown">
-                            <md-icon class="white">alarm</md-icon>
+                        <md-nav-item ui-sref="stopwatch" md-nav-sref="stopwatch" name="stopwatch">
+                            <md-icon class="white">update</md-icon>
                         </md-nav-item>
                     </div>
                 </md-nav-bar>
@@ -30,7 +30,11 @@
         </div>
     </header>
     <content class='md-padding' layout="row" flex>
-            HALLO
+        <div layout="column" layout-align="center center">
+        <div class="container">
+            <div ui-view></div>
+        </div>
+</div>
     </content>
     <md-toolbar>
         <div layout="row" layout-align="center center" flex>
@@ -44,6 +48,8 @@
 <script type="text/javascript" src="components/angular-animate/angular-animate.min.js"></script>
 <script type="text/javascript" src="components/angular-messages/angular-messages.min.js"></script>
 <script type="text/javascript" src="components/angular-material/angular-material.min.js"></script>
+<script type="text/javascript" src="components/angular-ui-router/release/angular-ui-router.min.js"></script>
 <script type="text/javascript" src="index.js"></script>
+
 </body>
 </html>
