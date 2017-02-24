@@ -30,18 +30,10 @@ app.controller('ClockController', ($scope) => {
     $scope.onThemeChange = function (Dark) {
         if (Dark) {
             $scope.theme = "clock-dark";
+            $scope.othertheme = 'Hell'
         } else {
             $scope.theme = "clock";
+            $scope.othertheme = 'Dunkel'
         }
     };
-
-    //Bottom Tollbar Stuff
-    $scope.isOpen = false;
-    $scope.bottomToolbar = {
-        isOpen: false,
-        count: 0,
-        selectedDirection: 'left'
-
-    }
-
 });
