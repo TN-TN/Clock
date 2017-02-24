@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Clock</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="components/angular-material/angular-material.min.css">
+    <link rel="stylesheet" type="text/css" href="components/material-design-icons/iconfont/material-icons.css">
+</head>
+<body ng-app="ClockApp">
+
+<div ng-controller="ClockController" ng-cloak class="wrapper">
+    <div layout-fill layout="column" ng-cloak>
+
+        <md-content md-theme='{{theme}}' md-theme-watch="true">
+            <md-nav-bar md-selected-nav-item="1" md-no-ink-bar="false" aria-label="mainNavBar">
+                <div layout="row" layout-align="center" flex>
+                    <md-nav-item md-nav-href="#page2" name="clock">
+                        <md-icon class="white">alarm</md-icon>
+                    </md-nav-item>
+                    <md-nav-item md-nav-href="#page2" name="stopwatch">
+                        <md-icon class="white">alarm</md-icon>
+                    </md-nav-item>
+                    <md-nav-item md-nav-href="#page2" name="countdown">
+                        <md-icon class="white">alarm</md-icon>
+                    </md-nav-item>
+                </div>
+
+            </md-nav-bar>
+
+        </md-content>
+    </div>
+
+    <div class="footer">
+        <md-fab-toolbar md-open="bottomToolbar.isOpen" count="bottomToolbar.count" md-direction="{{bottomToolbar.selectedDirection}}">
+            <md-fab-trigger class="align-with-text">
+                <md-button aria-label="menu" class="md-fab md-primary">
+                    <md-icon md-svg-src="img/icons/menu.svg"></md-icon>
+                </md-button>
+            </md-fab-trigger>
+
+            <md-toolbar>
+                <md-fab-actions class="md-toolbar-tools">
+                    <md-checkbox ng-model="isDark" ng-change="onThemeChange(isDark)"></md-checkbox>
+                    <md-button aria-label="label" class="md-icon-button">
+                        <md-icon md-svg-src="img/icons/ic_label_24px.svg"></md-icon>
+                    </md-button>
+                    <md-button aria-label="photo" class="md-icon-button">
+                        <md-icon md-svg-src="img/icons/ic_photo_24px.svg"></md-icon>
+                    </md-button>
+                </md-fab-actions>
+            </md-toolbar>
+        </md-fab-toolbar>
+    </div>
+</div>
+
+<script type="text/javascript" src="components/angular/angular.min.js"></script>
+<script type="text/javascript" src="components/angular-aria/angular-aria.min.js"></script>
+<script type="text/javascript" src="components/angular-animate/angular-animate.min.js"></script>
+<script type="text/javascript" src="components/angular-messages/angular-messages.min.js"></script>
+<script type="text/javascript" src="components/angular-material/angular-material.min.js"></script>
+<script type="text/javascript" src="index.js"></script>
+</body>
+</html>

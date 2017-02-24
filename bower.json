@@ -1,0 +1,22 @@
+{
+  "name": "clock",
+  "description": "Simple and stylish clock with timer and countdown",
+  "main": "src/main.js",
+  "authors": [
+    "Tom Sacher <tomnik104@yahoo.de>"
+  ],
+  "license": "CC-BY-NC-ND-4.0",
+  "keywords": [
+    "clock"
+  ],
+  "homepage": "https://github.com/TN-TN/Clock",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/components",
+    "test",
+    "tests"
+  ]
+}

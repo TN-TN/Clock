@@ -1,0 +1,25 @@
+{
+  "name": "clock",
+  "version": "1.0.0",
+  "description": "Simple and stylish clock with timer and countdown",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TN-TN/Clock.git"
+  },
+  "keywords": [
+    "clock"
+  ],
+  "author": "Tom Sacher <tomnik104@yahoo.de>",
+  "license": "CC-BY-NC-ND-4.0",
+  "bugs": {
+    "url": "https://github.com/TN-TN/Clock/issues"
+  },
+  "homepage": "https://github.com/TN-TN/Clock#readme",
+  "dependencies": {
+    "electron": "^1.4.15"
+  }
+}
