@@ -1,3 +1,11 @@
 content {
     min-height: calc(100vh - 176px);
 }
+.unselectable {
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    cursor: default;
+}

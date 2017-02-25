@@ -48,7 +48,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         .state('clock', {
             url: '/clock',
             templateUrl: 'pages/clock.html',
-            controller: function ($scope) {
+            controller: function ($scope, $state) {
                 $scope.safeApply = function (fn) {
                     const phase = this.$root.$$phase;
                     if (phase == '$apply' || phase == '$digest') {
@@ -59,8 +59,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
                         this.$apply(fn);
                     }
                 };
-
-                function update() {
+                function getCurrentTime() {
                     var currentTime = new Date();
                     var currentHours = currentTime.getHours();
                     var currentMinutes = currentTime.getMinutes();
@@ -70,11 +69,13 @@ app.config(function ($stateProvider, $urlRouterProvider) {
                     currentHours = ( currentHours > 12 ) ? currentHours - 12 : currentHours;
                     currentHours = ( currentHours == 0 ) ? 12 : currentHours;
                     var currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds;
-                    console.log(currentTimeString);
+                    return currentTimeString;
                 }
-
-                update();
-
+                setInterval(function () {
+                    if($state.current.name == 'clock'){
+                        document.getElementById("clock").innerHTML = getCurrentTime();
+                    }
+                }, 999);
                 console.log('clock')
             }
         })

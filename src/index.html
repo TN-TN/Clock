@@ -11,7 +11,7 @@
 
 <div ng-controller="ClockController" layout="column" layout-fill ng-cloak class="wrapper">
     <header>
-        <div layout-fill layout="column" ng-cloak>
+        <div class="unselectable" layout-fill layout="column" ng-cloak>
             <md-content md-theme='{{theme}}' md-theme-watch="true">
                 <md-nav-bar md-no-ink-bar="false" aria-label="mainNavBar">
                     <div layout="row" layout-align="center" flex>
@@ -29,16 +29,16 @@
             </md-content>
         </div>
     </header>
-    <content class='md-padding' layout="row" flex>
-        <div layout="column" layout-align="center center">
+    <content class='md-padding unselectable' flex>
         <div class="container">
-            <div ui-view></div>
+            <div layout="row" layout-align="center center" flex>
+                <div ui-view></div>
+            </div>
         </div>
-</div>
     </content>
-    <md-toolbar>
+    <md-toolbar class="unselectable">
         <div layout="row" layout-align="center center" flex>
-            <span>FOOTER</span>
+            <span>Clock</span>
         </div>
     </md-toolbar>
 </div>
